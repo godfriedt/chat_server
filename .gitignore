@@ -1,6 +1,7 @@
 /debug
 .git
 .DS_Store
+Makefile
 login.exe
 .vscode/
 server
