@@ -25,10 +25,10 @@ int main(int argc, char* argv[]) {
     printf("[DEBUG] Socket created successfully (fd=%d)\n", sockfd);
 
     servaddr.sin_family = AF_INET;
-    servaddr.sin_port = htons(51423);
+    servaddr.sin_port = htons(8989);
     servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
-    printf("[DEBUG] Attempting to connect to 127.0.0.1:51423...\n");
+    printf("[DEBUG] Attempting to connect to server...\n");
     if (connect(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr)) < 0) {
         perror("[ERROR] connect");
         close(sockfd);
